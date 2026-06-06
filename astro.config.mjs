@@ -6,6 +6,11 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
   adapter: cloudflare(),
-  session: {},
+  output: 'static',
+  session: {
+    driver: {
+      entrypoint: 'unstorage/drivers/null',
+    },
+  },
 });
 
