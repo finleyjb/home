@@ -1,0 +1,82 @@
+---
+---
+
+<script>
+const canvas: HTMLCanvasElement = document.querySelector(
+  'canvas#nightsky',
+) as HTMLCanvasElement;
+const ctx: CanvasRenderingContext2D = canvas.getContext(
+  '2d',
+) as CanvasRenderingContext2D;
+
+interface Star {
+  angle: number;
+  readonly radius: number;
+  readonly speed: number;
+  readonly size: number;
+}
+
+let stars: Star[] = [];
+const numStars = 420;
+let animationId: number;
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  initStars();
+}
+
+function initStars() {
+  stars = Array.from({ length: numStars }, () => ({
+    angle: Math.random() * Math.PI * 2,
+    radius: Math.random() * Math.sqrt(canvas.width ** 2 + canvas.height ** 2),
+    speed: Math.random() * 0.0003 + 0.00015,
+    size: Math.random() * 1.8 + 0.5,
+  }));
+}
+
+function animate() {
+  const centerX = canvas.width;
+  const centerY = canvas.height;
+
+  ctx.fillStyle = 'oklch(0.2011 0.0312 286.04)';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  // Stars orbiting
+  stars.forEach((star, i) => {
+    // star.angle += star.speed;
+    const x = centerX + star.radius * Math.cos(star.angle);
+    const y = centerY + star.radius * Math.sin(star.angle);
+
+    const flicker =
+      0.4 + Math.abs(Math.sin(performance.now() * 0.0015 + i)) * 2;
+
+    ctx.beginPath();
+    ctx.fillStyle = `rgba(255, 255, 255, ${flicker})`;
+    ctx.arc(x, y, star.size, 0, Math.PI * 2);
+    ctx.fill();
+  });
+
+  animationId = requestAnimationFrame(animate);
+}
+
+// Init
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+animate();
+</script>
+
+<style>
+#nightsky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+  z-index: -1;
+}
+</style>
+
+<canvas id="nightsky"></canvas>
