@@ -9,13 +9,19 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "generate-types": "wrangler types"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^13.6.1",
     "astro": "^6.4.4",
-    "open-props": "^1.7.23"
+    "open-props": "^1.7.23",
+    "wrangler": "^4.98.0"
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.16"
+  },
+  "overrides": {
+    "vite": "^7"
   }
 }
