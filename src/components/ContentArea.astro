@@ -1,0 +1,60 @@
+---
+import Hero from '../components/Hero.astro';
+---
+
+<style>
+.content-area {
+  width: min(800px, calc(70% + 100px));
+  margin: 0 auto;
+}
+
+.content-area hgroup {
+  margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--text-color);
+  line-height: 1.1;
+  margin-bottom: clamp(10rem, 8rem + 10vw, 20rem);
+
+  text-shadow:
+    0 0 10px oklch(from var(--text-color) l c h / 0.5),
+    0 0 15px oklch(from var(--text-color) l c h / 0.3),
+    0 0 20px oklch(from var(--text-color) l c h / 0.1);
+
+  h1 {
+    font-size: clamp(3rem, 2.6rem + 2vw, 5rem);
+    font-family: "Zodiak", sans-serif;
+    font-weight: 650;
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 1.35rem + 0.75vw, 2.25rem);
+    font-family: "Zodiak", sans-serif;
+    color: oklch(0.970353 0.014063 20);
+  }
+}
+
+p {
+  color: var(--text-color);
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+a {
+  color: oklch(0.703143 0.121875 320);
+}
+</style>
+
+<div class="content-area">
+  <hgroup>
+    <h1>I'm Finley J Baker.</h1>
+    <h2>Welcome home.</h2>
+  </hgroup>
+
+  <p>
+    I'm a programmer, designer, artist, and night person. I have
+    <a href="https://blog.welcomehome.city">a blog</a>
+    that is hosted by
+    <a href="https://bearblog.dev">Bearblog</a>.
+  </p>
+</div>
