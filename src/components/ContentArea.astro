@@ -1,4 +1,5 @@
 ---
+import IndexLayoutAstroComponent from '../layout/IndexLayout.astro';
 ---
 
 <style>
@@ -22,14 +23,14 @@
 
   h1 {
     font-size: clamp(3rem, 2.6rem + 2vw, 5rem);
-    font-family: "Zodiak", sans-serif;
+    font-family: var(--font-zodiak);
     font-weight: 650;
     text-wrap: wrap;
   }
 
   h2 {
     font-size: clamp(1.5rem, 1.35rem + 0.75vw, 2.25rem);
-    font-family: "Zodiak", sans-serif;
+    font-family: var(--font-zodiak);
     color: oklch(0.970353 0.014063 20);
   }
 }
@@ -37,7 +38,7 @@
 p {
   color: var(--text-color);
   font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-plus-jakarta-sans);
 }
 
 a {

@@ -1,0 +1,61 @@
+---
+import { Font } from 'astro:assets';
+import '../styles/reset.css';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content={Astro.generator}>
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn.jsdelivr.net/gh/gitcrimes/my-cdn@255fa1f1957b8bf3ba4baa7cdbf2f3f000b14199/favicon/favicon-96x96.png"
+      sizes="96x96"
+    >
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://cdn.jsdelivr.net/gh/gitcrimes/my-cdn@255fa1f1957b8bf3ba4baa7cdbf2f3f000b14199/favicon/favicon.svg"
+    >
+    <link
+      rel="shortcut icon"
+      href="https://cdn.jsdelivr.net/gh/gitcrimes/my-cdn@255fa1f1957b8bf3ba4baa7cdbf2f3f000b14199/favicon/favicon.ico"
+    >
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://cdn.jsdelivr.net/gh/gitcrimes/my-cdn@255fa1f1957b8bf3ba4baa7cdbf2f3f000b14199/favicon/apple-touch-icon.png"
+    >
+
+    <Font cssVariable="--font-zodiak" preload />
+    <Font cssVariable="--font-plus-jakarta-sans" preload />
+
+    <style is:global>
+    @font-face {
+      font-family: "Plus Jakarta Sans";
+      src: url("https://cdn.fontshare.com/wf/U2HFRBAHB5SL53RHFEF22BIJZSJRHR2Y/LFPV5QZIFT7V5OMDNHDQPJYOQAHFUE4W/CLVUG765RK3TA3ESG2NBCJJGWFQVIBTA.woff2")
+        format("woff2");
+      font-weight: 200 800;
+      font-display: swap;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Zodiak";
+      src: url("https://cdn.fontshare.com/wf/UDGW4K5KDO2WNP2256GU5CP7HQDVADLQ/LML445TYWQT7TRPDYZPCIVB3BJWX7NTD/2O5TXCJMYUDHI5FO6N4PXN6WNROSBHNU.woff2")
+        format("woff2");
+      font-weight: 100 900;
+      font-display: swap;
+      font-style: normal;
+    }
+    </style>
+    <title>Welcome Home</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
