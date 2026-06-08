@@ -47,8 +47,23 @@ export default defineConfig({
         ],
       },
     },
+
+    {
+      provider: fontProviders.local(),
+      name: "Sentient",
+      cssVariable: "--font-sentient",
+      fallbacks: ["serif"],
+      options: {
+        variants: [
+          {
+            src: ["./src/assets/fonts/Sentient-Variable.woff2"],
+            weight: "200 700",
+            style: "normal",
+          },
+        ],
+      },
+    },
   ],
 
   integrations: [sitemap()],
 });
-
