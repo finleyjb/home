@@ -1,25 +1,55 @@
 ---
-import IndexLayoutAstroComponent from '../layout/IndexLayout.astro';
 ---
 
 <style>
+@media (prefers-color-scheme: dark) {
+  :global(body) {
+    --background-gradient: linear-gradient(
+      to top left,
+      #020111 60%,
+      #20202c 100%
+    );
+    --h-color: oklch(0.8528 0.0312 261.34);
+    --text-shadow:
+      0 0 10px oklch(from var(--h-color) l c h / 0.5),
+      0 0 15px oklch(from var(--h-color) l c h / 0.3),
+      0 0 20px oklch(from var(--h-color) l c h / 0.1);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :global(body) {
+    --background-gradient: linear-gradient(
+      to bottom right,
+      #9be2fe 0%,
+      #67d1fb 100%
+    );
+    --h-color: oklch(0.2383 0.0508 71.34);
+    --text-shadow: ;
+  }
+}
+
 .content-area {
   width: min(800px, calc(70% + 100px));
   margin: 0 auto;
+}
+
+:global(body) {
+  background: var(--background-gradient);
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .content-area hgroup {
   margin-top: 5rem;
   margin-left: auto;
   margin-right: auto;
-  color: var(--text-color);
   line-height: 1.1;
   margin-bottom: clamp(8rem, 7.1995rem + 4.0025vw, 12rem);
-
-  text-shadow:
-    0 0 10px oklch(from var(--text-color) l c h / 0.5),
-    0 0 15px oklch(from var(--text-color) l c h / 0.3),
-    0 0 20px oklch(from var(--text-color) l c h / 0.1);
+  color: var(--h-color);
+  text-shadow: var(--text-shadow);
 
   h1 {
     font-size: clamp(3rem, 2.6rem + 2vw, 5rem);
@@ -31,12 +61,11 @@ import IndexLayoutAstroComponent from '../layout/IndexLayout.astro';
   h2 {
     font-size: clamp(1.5rem, 1.35rem + 0.75vw, 2.25rem);
     font-family: var(--font-zodiak);
-    color: oklch(0.970353 0.014063 20);
   }
 }
 
 p {
-  color: var(--text-color);
+  color: var(--h-color);
   font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
   font-family: var(--font-plus-jakarta-sans);
 }

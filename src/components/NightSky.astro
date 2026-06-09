@@ -39,7 +39,7 @@ function animate() {
   const centerX = canvas.width;
   const centerY = canvas.height;
 
-  ctx.fillStyle = 'oklch(0.2011 0.0312 286.04)';
+  ctx.fillStyle = 'rgba(0, 0, 0, 0)';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   // Stars orbiting
@@ -76,6 +76,12 @@ animate();
   display: block;
   pointer-events: none;
   z-index: -1;
+}
+
+@media (prefers-color-scheme: light) {
+  #nightsky {
+    display: none;
+  }
 }
 </style>
 
