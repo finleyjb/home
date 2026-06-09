@@ -17,7 +17,6 @@
     "@astrojs/cloudflare": "^13.6.1",
     "@astrojs/sitemap": "^3.7.3",
     "@fontsource/metropolis": "^5.2.5",
-    "@typehaus/metropolis": "12.0.0-next.7",
     "astro": "^6.4.4",
     "astro-seo": "^1.1.0",
     "open-props": "^1.7.23",

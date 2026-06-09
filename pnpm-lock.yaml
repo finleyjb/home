@@ -17,9 +17,6 @@ importers:
       '@fontsource/metropolis':
         specifier: ^5.2.5
         version: 5.2.5
-      '@typehaus/metropolis':
-        specifier: 12.0.0-next.7
-        version: 12.0.0-next.7
       astro:
         specifier: ^6.4.4
         version: 6.4.4(@types/node@24.13.1)(rollup@4.61.1)(yaml@2.9.0)
@@ -933,9 +930,6 @@ packages:
 
   '@speed-highlight/core@1.2.15':
     resolution: {integrity: sha512-BMq1K3DsElxDWawkX6eLg9+CKJrTVGCBAWVuHXVUV2u0s2711qiChLSId6ikYPfxhdYocLNt3wWwSvDiTvFabw==}
-
-  '@typehaus/metropolis@12.0.0-next.7':
-    resolution: {integrity: sha512-YpJwXiyKQy0j+3LZ1SM2VaO/W3V4aGlzTCkLOBu3dpdXtOMEYVmzMvhK1hsMyernjYp7xq9QnCbd+K+E/kMfgw==}
 
   '@types/debug@4.1.13':
     resolution: {integrity: sha512-KSVgmQmzMwPlmtljOomayoR89W4FynCAi3E8PPs7vmDVPe84hT+vGPKkJfThkmXs0x0jAaa9U8uW8bbfyS2fWw==}
@@ -2829,8 +2823,6 @@ snapshots:
   '@sindresorhus/is@7.2.0': {}
 
   '@speed-highlight/core@1.2.15': {}
-
-  '@typehaus/metropolis@12.0.0-next.7': {}
 
   '@types/debug@4.1.13':
     dependencies:
