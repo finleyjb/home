@@ -23,6 +23,9 @@ importers:
       open-props:
         specifier: ^1.7.23
         version: 1.7.23
+      sharp:
+        specifier: ^0.34.5
+        version: 0.34.5
       wrangler:
         specifier: ^4.98.0
         version: 4.98.0

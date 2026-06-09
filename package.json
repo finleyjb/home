@@ -19,6 +19,7 @@
     "@typehaus/metropolis": "12.0.0-next.7",
     "astro": "^6.4.4",
     "open-props": "^1.7.23",
+    "sharp": "^0.34.5",
     "wrangler": "^4.98.0"
   },
   "devDependencies": {
