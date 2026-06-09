@@ -10,6 +10,8 @@
       #20202c 100%
     );
     --h-color: oklch(0.8528 0.0312 261.34);
+    --h-weight: 650;
+    --p-weight: 350;
     --text-shadow:
       0 0 10px oklch(from var(--h-color) l c h / 0.5),
       0 0 15px oklch(from var(--h-color) l c h / 0.3),
@@ -25,12 +27,14 @@
       #67d1fb 100%
     );
     --h-color: oklch(0.2383 0.0508 71.34);
+    --h-weight: 700;
+    --p-weight: 400;
     --text-shadow: ;
   }
 }
 
 .content-area {
-  width: min(800px, calc(70% + 100px));
+  width: min(70ch, calc(70% + 100px));
   margin: 0 auto;
 }
 
@@ -53,21 +57,22 @@
 
   h1 {
     font-size: clamp(3rem, 2.6rem + 2vw, 5rem);
-    font-family: var(--font-zodiak);
-    font-weight: 650;
+    font-family: var(--font-metropolis);
+    font-weight: var(--h-weight);
     text-wrap: wrap;
   }
 
   h2 {
     font-size: clamp(1.5rem, 1.35rem + 0.75vw, 2.25rem);
-    font-family: var(--font-zodiak);
+    font-weight: var(--h-weight);
+    font-family: var(--font-metropolis);
   }
 }
 
 p {
   color: var(--h-color);
   font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
-  font-family: var(--font-plus-jakarta-sans);
+  font-family: var(--font-bespoke-serif);
 }
 
 a {

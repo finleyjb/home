@@ -16,6 +16,7 @@
   "dependencies": {
     "@astrojs/cloudflare": "^13.6.1",
     "@astrojs/sitemap": "^3.7.3",
+    "@typehaus/metropolis": "12.0.0-next.7",
     "astro": "^6.4.4",
     "open-props": "^1.7.23",
     "wrangler": "^4.98.0"
