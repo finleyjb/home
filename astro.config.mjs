@@ -40,14 +40,27 @@ export default defineConfig({
 
     {
       provider: fontProviders.npm(),
-      name: 'Metropolis',
-      cssVariable: '--font-metropolis',
+      name: 'Metropolis Display',
+      cssVariable: '--font-metropolis-display',
       fallbacks: ['sans-serif'],
       weights: ['700'],
       styles: ['normal'],
       options: {
-        package: '@typehaus/metropolis',
+        package: '@fontsource/metropolis',
         file: '700.css',
+      },
+    },
+
+    {
+      provider: fontProviders.npm(),
+      name: 'Metropolis Body',
+      cssVariable: '--font-metropolis-body',
+      fallbacks: ['sans-serif'],
+      weights: ['400'],
+      styles: ['normal'],
+      options: {
+        package: '@fontsource/metropolis',
+        file: '400.css',
       },
     },
   ],
