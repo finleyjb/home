@@ -19,15 +19,20 @@ export default defineConfig({
   fonts: [
     {
       provider: fontProviders.local(),
-      name: 'Bespoke Serif',
-      cssVariable: '--font-bespoke-serif',
+      name: 'Bespoke Slab',
+      cssVariable: '--font-bespoke-slab',
       fallbacks: ['serif'],
       options: {
         variants: [
           {
-            src: ['./src/assets/fonts/BespokeSerif-Variable.woff2'],
+            src: ['./src/assets/fonts/BespokeSlab-Variable.woff2'],
             weight: '300 800',
             style: 'normal',
+          },
+          {
+            src: ['./src/assets/fonts/BespokeSlab-VariableItalic.woff2'],
+            weight: '300 800',
+            style: 'italic',
           },
         ],
       },
