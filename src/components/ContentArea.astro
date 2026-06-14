@@ -1,4 +1,5 @@
 ---
+import NightSky from './NightSky.astro';
 ---
 
 <style>
@@ -80,19 +81,23 @@ a {
 }
 </style>
 
-<main class="content-area">
-  <hgroup>
-    <h1>Welcome home.</h1>
-    <h2>I'm Finley J Baker.</h2>
-  </hgroup>
+<NightSky>
+  <main class="content-area">
+    <hgroup>
+      <h1>Welcome home.</h1>
+      <h2>I'm Finley J Baker.</h2>
+    </hgroup>
 
-  <p>
-    I'm a programmer, designer, and artist. I have
-    <a href="https://blog.welcomehome.city">a blog</a>
-    that is hosted by
-    <a href="https://bearblog.dev"
-      >Bearblog
-      <span role="img" class="bear" aria-label="ASCII bear logo">ʕ•ᴥ•ʔ</span></a
-    >.
-  </p>
-</main>
+    <p>
+      I'm a programmer, designer, and artist. I have
+      <a href="https://blog.welcomehome.city">a blog</a>
+      that is hosted by
+      <a href="https://bearblog.dev"
+        >Bearblog
+        <span role="img" class="bear" aria-label="ASCII bear logo"
+          >ʕ•ᴥ•ʔ</span
+        ></a
+      >.
+    </p>
+  </main>
+</NightSky>

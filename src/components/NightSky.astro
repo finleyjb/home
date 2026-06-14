@@ -1,88 +1,122 @@
 ---
 ---
 
-<script>
-const canvas: HTMLCanvasElement = document.querySelector(
-  'canvas#nightsky',
-) as HTMLCanvasElement;
-const ctx: CanvasRenderingContext2D = canvas.getContext(
-  '2d',
-) as CanvasRenderingContext2D;
-
-interface Star {
-  angle: number;
-  readonly radius: number;
-  readonly speed: number;
-  readonly size: number;
-}
-
-let stars: Star[] = [];
-const numStars = 840;
-let animationId: number;
-
-function resizeCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  initStars();
-}
-
-function initStars() {
-  stars = Array.from({ length: numStars }, () => ({
-    angle: Math.random() * Math.PI * 2,
-    radius: Math.random() * Math.sqrt(canvas.width ** 2 + canvas.height ** 2),
-    speed: Math.random() * 0.0003 + 0.00015,
-    size: Math.random() * 1.8 + 0.5,
-  }));
-}
-
-function animate() {
-  const centerX = canvas.width;
-  const centerY = canvas.height;
-
-  ctx.fillStyle = 'rgba(0, 0, 0, 0)';
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-  // Stars orbiting
-  stars.forEach((star, i) => {
-    // star.angle += star.speed;
-    const x = centerX + star.radius * Math.cos(star.angle);
-    const y = centerY + star.radius * Math.sin(star.angle);
-
-    const flicker =
-      0.4 + Math.abs(Math.sin(performance.now() * 0.0015 + i)) * 2;
-
-    ctx.beginPath();
-    ctx.fillStyle = `rgba(255, 255, 255, ${flicker})`;
-    ctx.arc(x, y, star.size, 0, Math.PI * 2);
-    ctx.fill();
-  });
-
-  animationId = requestAnimationFrame(animate);
-}
-
-// Init
-window.addEventListener('resize', resizeCanvas);
-resizeCanvas();
-animate();
-</script>
-
 <style>
-#nightsky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+html {
   height: 100%;
-  display: block;
-  pointer-events: none;
-  z-index: -1;
+  background: radial-gradient(ellipse at bottom, #070d13 0%, #090a0f 100%);
+  overflow: hidden;
 }
 
-@media (prefers-color-scheme: light) {
-  #nightsky {
-    display: none;
+/* Estrelas pequenas */
+.stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow:
+    100px 100px #f8aa00,
+    200px 300px #f8aa00,
+    400px 150px #f8aa00,
+    800px 700px #f8aa00,
+    1200px 1100px #f8aa00,
+    1400px 1300px #f8aa00,
+    1600px 1150px #f8aa00,
+    1800px 1700px #f8aa00,
+    500px 400px #f8aa00,
+    600px 600px #f8aa00,
+    700px 900px #f8aa00,
+    1100px 800px #f8aa00,
+    200px 1200px #f8aa00,
+    400px 1300px #f8aa00,
+    600px 1450px #f8aa00,
+    800px 1600px #f8aa00,
+    1700px 1700px #f8aa00,
+    1500px 1800px #f8aa00,
+    1300px 1950px #f8aa00,
+    1100px 2100px #f8aa00;
+  animation: animStar 50s linear infinite;
+}
+
+/* Estrelas médias */
+.stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow:
+    150px 200px #01a2ff,
+    300px 400px #01a2ff,
+    500px 250px #01a2ff,
+    900px 800px #01a2ff,
+    1200px 1050px #01a2ff,
+    1400px 1200px #01a2ff,
+    1600px 1350px #01a2ff,
+    1800px 1500px #01a2ff,
+    200px 200px #01a2ff,
+    400px 500px #01a2ff,
+    600px 800px #01a2ff,
+    1000px 900px #01a2ff,
+    300px 1100px #01a2ff,
+    500px 1250px #01a2ff,
+    700px 1400px #01a2ff,
+    900px 1550px #01a2ff,
+    1100px 1600px #01a2ff,
+    1300px 1700px #01a2ff,
+    1500px 1850px #01a2ff,
+    1700px 2000px #01a2ff;
+  animation: animStar 100s linear infinite;
+}
+
+/* Estrelas grandes */
+.stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow:
+    200px 300px #fff,
+    400px 500px #fff,
+    600px 350px #fff,
+    1000px 900px #fff,
+    1300px 1150px #fff,
+    1500px 1300px #fff,
+    1700px 1450px #fff,
+    1900px 1600px #fff,
+    250px 400px #fff,
+    450px 600px #fff,
+    650px 900px #fff,
+    850px 1100px #fff,
+    1050px 1200px #fff,
+    1250px 1400px #fff,
+    1450px 1600px #fff,
+    1650px 1800px #fff,
+    1850px 1900px #fff,
+    2050px 2100px #fff,
+    2250px 2300px #fff,
+    2450px 2500px #fff;
+  animation: animStar 150s linear infinite;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(-1000px);
   }
+  to {
+    transform: translateY(-2000px);
+  }
+}
+
+section {
+  height: 100vh;
 }
 </style>
 
-<canvas id="nightsky"></canvas>
+<section>
+  <div class="stars"></div>
+  <div class="stars2"></div>
+  <div class="stars3"></div>
+
+  <slot />
+
+  <div class="stars2"></div>
+  <div class="stars3"></div>
+  <div class="stars"></div>
+</section>
