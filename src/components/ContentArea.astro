@@ -3,35 +3,19 @@ import NightSky from './NightSky.astro';
 ---
 
 <style>
-@media (prefers-color-scheme: dark) {
-  :global(body) {
-    --background-gradient: linear-gradient(
-      to top left,
-      #020111 60%,
-      #20202c 100%
-    );
-    --h-color: oklch(0.8528 0.0312 261.34);
-    --h-weight: 650;
-    --p-weight: 350;
-    --text-shadow:
-      0 0 10px oklch(from var(--h-color) l c h / 0.5),
-      0 0 15px oklch(from var(--h-color) l c h / 0.3),
-      0 0 20px oklch(from var(--h-color) l c h / 0.1);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  :global(body) {
-    --background-gradient: linear-gradient(
-      to bottom right,
-      #9be2fe 0%,
-      #67d1fb 100%
-    );
-    --h-color: oklch(0.2383 0.0508 71.34);
-    --h-weight: 700;
-    --p-weight: 400;
-    --text-shadow: ;
-  }
+:global(body) {
+  --background-gradient: linear-gradient(
+    to top left,
+    #020111 60%,
+    #20202c 100%
+  );
+  --h-color: oklch(0.8528 0.0312 261.34);
+  --h-weight: 650;
+  --p-weight: 350;
+  --text-shadow:
+    0 0 10px oklch(from var(--h-color) l c h / 0.5),
+    0 0 15px oklch(from var(--h-color) l c h / 0.3),
+    0 0 20px oklch(from var(--h-color) l c h / 0.1);
 }
 
 .content-area {
