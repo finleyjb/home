@@ -9,6 +9,7 @@ export default defineConfig({
   adapter: cloudflare(),
   output: 'static',
   site: 'https://welcomehome.city',
+  compressHTML: true,
 
   session: {
     driver: {
