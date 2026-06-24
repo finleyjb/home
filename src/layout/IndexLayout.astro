@@ -40,6 +40,8 @@ import { SEO } from 'astro-seo';
       href="https://cdn.jsdelivr.net/gh/gitcrimes/my-cdn@255fa1f1957b8bf3ba4baa7cdbf2f3f000b14199/favicon/apple-touch-icon.png"
     >
 
+    <slot name="fonts" />
+
     <Font cssVariable="--font-metropolis-display" preload />
     <Font cssVariable="--font-metropolis-body" preload />
   </head>
