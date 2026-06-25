@@ -1,5 +1,6 @@
 <style>
 nav {
+  line-height: 1.5;
   width: max(50ch, calc(70% + 100px));
 
   > * + * {
@@ -27,8 +28,8 @@ nav {
 }
 </style>
 
-<nav>
-  <h2>Navigation</h2>
+<nav aria-labelledby="nav-header">
+  <h2 id="nav-header">Navigation</h2>
   <p>
     I have
     <a class="nav-link" href="https://blog.welcomehome.city/b">a blog</a>
