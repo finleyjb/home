@@ -1,0 +1,40 @@
+<style>
+nav {
+  width: max(50ch, calc(70% + 100px));
+
+  > * + * {
+    margin-block-start: 1rem;
+  }
+
+  > h2 {
+    /* 18px at 320px viewport */
+    /* 28px at 1920px viewport */
+    font-size: clamp(1.125rem, 1rem + 0.625vw, 1.75rem);
+  }
+
+  > p {
+    font-size: 95%;
+  }
+
+  > h2 + p {
+    margin-block-start: 0;
+  }
+
+  a {
+    font-weight: bold;
+    padding-right: 0;
+  }
+}
+</style>
+
+<nav>
+  <h2>Navigation</h2>
+  <p>
+    I have
+    <a class="nav-link" href="https://blog.welcomehome.city/b">a blog</a>
+    that I host at Bearblog
+    <span role="img" class="bear" aria-label="ASCII bear logo">ʕ•ᴥ•ʔ</span>. I
+    use this blog to write about engineering, design, and the indie web. This
+    was the start of my love of typography and design.
+  </p>
+</nav>
