@@ -17,6 +17,9 @@ importers:
       '@fontsource/metropolis':
         specifier: ^5.2.5
         version: 5.2.5
+      '@welcome-home/wh-base':
+        specifier: ^0.4.0
+        version: 0.4.0
       astro:
         specifier: ^7.0.2
         version: 7.0.2(@astrojs/markdown-remark@7.2.0)(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)(@types/node@24.13.2)(rollup@4.61.1)(yaml@2.9.0)
@@ -1220,6 +1223,9 @@ packages:
 
   '@vscode/l10n@0.0.18':
     resolution: {integrity: sha512-KYSIHVmslkaCDyw013pphY+d7x1qV8IZupYfeIfzNA+nsaWHbn5uPuQRvdRFsa9zFzGeudPuoGoZ1Op4jrJXIQ==}
+
+  '@welcome-home/wh-base@0.4.0':
+    resolution: {integrity: sha512-ikLxUP+WWR+pyStXkG/9KZnbkK2NoIfo7ndvd0L3MKbOf7mpdVZiDHXJxgO2pkjFSBg7eLYBfKoTsOlO+p7hmw==}
 
   ajv-draft-04@1.0.0:
     resolution: {integrity: sha512-mv00Te6nmYbRp5DCwclxtt7yV/joXJPGS7nM+97GdxvuttCOfgI3K4U25zboyeX0O+myI8ERluxQe5wljMmVIw==}
@@ -3436,6 +3442,8 @@ snapshots:
       vscode-uri: 3.1.0
 
   '@vscode/l10n@0.0.18': {}
+
+  '@welcome-home/wh-base@0.4.0': {}
 
   ajv-draft-04@1.0.0(ajv@8.20.0):
     optionalDependencies:

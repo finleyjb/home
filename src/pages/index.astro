@@ -3,11 +3,41 @@ import { Font } from 'astro:assets';
 import ContentArea from '../components/ContentArea.astro';
 import IndexLayout from '../layout/IndexLayout.astro';
 
-import '../styles/reset.css';
+import '@welcome-home/wh-base/wh-base.css';
 ---
 
+<style is:global>
+@layer user-config {
+  :root,
+  :host {
+    --font-family-title: var(--font-pilcrow-rounded);
+    --font-family-base: var(--font-pilcrow-rounded);
+    --font-family-code:
+      "JetBrains Mono", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
+      Consolas, "DejaVu Sans Mono", monospace;
+    --font-family-heading: var(--font-archivo);
+    --font-weight-title: 800;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root,
+    :host {
+      --color-primary: hsl(343deg, 81%, 75%);
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root,
+    :host {
+      --color-primary: hsl(347deg, 87%, 44%);
+    }
+  }
+}
+</style>
+
 <IndexLayout>
-  <Font cssVariable="--font-metropolis-display" preload slot="fonts" />
-  <Font cssVariable="--font-metropolis-body" preload slot="fonts" />
+  <Font cssVariable="--font-pilcrow-rounded" preload slot="fonts" />
+  <Font cssVariable="--font-archivo" preload slot="fonts" />
+  <Font cssVariable="--font-jetbrains-mono" slot="fonts" />
   <ContentArea />
 </IndexLayout>

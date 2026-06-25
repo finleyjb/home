@@ -19,6 +19,24 @@ export default defineConfig({
 
   fonts: [
     {
+      provider: fontProviders.fontshare(),
+      name: 'Pilcrow Rounded',
+      cssVariable: '--font-pilcrow-rounded',
+    },
+
+    {
+      provider: fontProviders.fontshare(),
+      name: 'Archivo',
+      cssVariable: '--font-archivo',
+    },
+
+    {
+      provider: fontProviders.fontshare(),
+      name: 'JetBrains Mono',
+      cssVariable: '--font-jetbrains-mono',
+    },
+
+    {
       provider: fontProviders.npm(),
       name: 'Metropolis',
       cssVariable: '--font-metropolis-display',

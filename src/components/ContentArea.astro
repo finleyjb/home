@@ -1,87 +1,13 @@
----
-import NightSky from './NightSky.astro';
----
-
 <style>
-:global(body) {
-  --background-gradient: linear-gradient(
-    to top left,
-    #020111 60%,
-    #20202c 100%
-  );
-  --h-color: oklch(0.8528 0.0312 261.34);
-  --h-weight: 650;
-  --p-weight: 350;
-  --text-shadow:
-    0 0 10px oklch(from var(--h-color) l c h / 0.5),
-    0 0 15px oklch(from var(--h-color) l c h / 0.3),
-    0 0 20px oklch(from var(--h-color) l c h / 0.1);
-}
+main.content-area {
+  margin-top: 15rem;
 
-.content-area {
-  width: min(70ch, calc(70% + 100px));
-  margin: 0 auto;
-}
-
-:global(body) {
-  background: var(--background-gradient);
-  height: 100%;
-  margin: 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-.content-area hgroup {
-  margin-top: 5rem;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.1;
-  margin-bottom: clamp(8rem, 7.1995rem + 4.0025vw, 12rem);
-  color: var(--h-color);
-  text-shadow: var(--text-shadow);
-
-  h1 {
-    font-size: clamp(3rem, 2.6rem + 2vw, 5rem);
-    font-family: var(--font-metropolis-display);
-    font-weight: var(--h-weight);
-    text-wrap: wrap;
+  > h1 {
+    border-top: none;
   }
-
-  h2 {
-    font-size: clamp(1.5rem, 1.35rem + 0.75vw, 2.25rem);
-    font-weight: var(--h-weight);
-    font-family: var(--font-metropolis-display);
-  }
-}
-
-p {
-  color: var(--h-color);
-  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
-  font-family: var(--font-metropolis-body);
-}
-
-a {
-  color: oklch(0.703143 0.121875 320);
 }
 </style>
 
-<NightSky>
-  <main class="content-area">
-    <hgroup>
-      <h1>Welcome home.</h1>
-      <h2>I'm Finley J Baker.</h2>
-    </hgroup>
-
-    <p>
-      I'm a programmer, designer, and artist. I have
-      <a href="https://blog.welcomehome.city">a blog</a>
-      that is hosted by
-      <a href="https://bearblog.dev"
-        >Bearblog
-        <span role="img" class="bear" aria-label="ASCII bear logo"
-          >ʕ•ᴥ•ʔ</span
-        ></a
-      >.
-    </p>
-  </main>
-</NightSky>
+<main class="content-area">
+  <h1>I'm Finley J Baker, design engineer.</h1>
+</main>
