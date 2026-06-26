@@ -30,13 +30,17 @@ nav {
 }
 </style>
 
+<script>
+import { prefetch } from 'astro:prefetch';
+
+prefetch('https://blog.welcomehome.city', { eagerness: 'eager' });
+</script>
+
 <nav aria-labelledby="nav-header">
   <h2 id="nav-header">Navigation</h2>
   <p>
     I have
-    <a href="https://blog.welcomehome.city/" data-astro-prefetch="viewport"
-      >a blog</a
-    >
+    <a href="https://blog.welcomehome.city/">a blog</a>
     that I host at Bearblog
     <span role="img" class="bear" aria-label="ASCII bear logo">ʕ•ᴥ•ʔ</span>. I
     use this blog to write about engineering, design, and the indie web. This
