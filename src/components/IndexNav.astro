@@ -31,9 +31,10 @@ nav {
 </style>
 
 <script>
-import { prefetch } from 'astro:prefetch';
-
-prefetch('https://blog.welcomehome.city', { eagerness: 'eager' });
+const prefetchLink = document.createElement('link');
+prefetchLink.href = 'https://blog.welcomehome.city';
+prefetchLink.rel = 'prefetch';
+document.head.appendChild(prefetchLink);
 </script>
 
 <nav aria-labelledby="nav-header">
