@@ -10,6 +10,7 @@ export default defineConfig({
   output: 'static',
   site: 'https://welcomehome.city',
   compressHTML: true,
+  prefetch: { defaultStrategy: 'viewport' },
 
   session: {
     driver: {
