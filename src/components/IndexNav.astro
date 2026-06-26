@@ -22,9 +22,16 @@ nav {
     margin-block-start: 0;
   }
 
-  a {
+  p > a {
     font-weight: bold;
     padding-right: 0;
+    background: linear-gradient(
+      to right,
+      var(--color-primary),
+      var(--color-secondary)
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 </style>
@@ -33,7 +40,7 @@ nav {
   <h2 id="nav-header">Navigation</h2>
   <p>
     I have
-    <a class="nav-link" href="https://blog.welcomehome.city/b">a blog</a>
+    <a href="https://blog.welcomehome.city/b">a blog</a>
     that I host at Bearblog
     <span role="img" class="bear" aria-label="ASCII bear logo">ʕ•ᴥ•ʔ</span>. I
     use this blog to write about engineering, design, and the indie web. This
