@@ -3,6 +3,10 @@ import IndexNav from './IndexNav.astro';
 ---
 
 <style>
+:global(:root) {
+  --body-width: min(55ch, 70% + 100px);
+}
+
 section#hero-section {
   margin-top: 20vh;
   margin-bottom: 15vh;
