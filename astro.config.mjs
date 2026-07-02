@@ -27,7 +27,7 @@ export default defineConfig({
     },
 
     {
-      provider: fontProviders.fontshare(),
+      provider: fontProviders.fontsource(),
       name: 'Archivo',
       cssVariable: '--font-archivo',
       weights: ['100 900'],
