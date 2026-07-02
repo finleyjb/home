@@ -23,18 +23,21 @@ export default defineConfig({
       provider: fontProviders.fontshare(),
       name: 'Pilcrow Rounded',
       cssVariable: '--font-pilcrow-rounded',
+      weights: ['400 900'],
     },
 
     {
       provider: fontProviders.fontshare(),
       name: 'Archivo',
       cssVariable: '--font-archivo',
+      weights: ['100 900'],
     },
 
     {
       provider: fontProviders.fontshare(),
       name: 'JetBrains Mono',
       cssVariable: '--font-jetbrains-mono',
+      weights: ['100 800'],
     },
 
     {
